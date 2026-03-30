@@ -10,6 +10,8 @@
         char estado1 = 'A';
         float densidadepopulacional1;
         float pibpercapita1;
+        float superpoder1;
+        
 
         int populacao2 = 6748000;
         char cidade2[40]= "riodejaneiro";
@@ -20,9 +22,12 @@
         char estado2 = 'B';
         float densidadepopulacional2;
         float pibpercapita2;
+        float superpoder2;
+        int resultado;
 
 
-        
+
+    
         printf("Nome da cidade da carta 1: \n");
         scanf("%s", cidade1);
         
@@ -75,6 +80,14 @@
         densidadepopulacional2 = (float) populacao2 / area2;
         pibpercapita2 = pib2 / (float) populacao2;
 
+        superpoder1 = populacao1 + area1 + pib1 + pibpercapita1 + ((float)1 / densidadepopulacional1) + pontos_turisticos1;
+        superpoder2 = populacao2 + area2 + pib2 + pibpercapita2 + ((float)1 / densidadepopulacional2) + pontos_turisticos2;
+
+        resultado = superpoder1 > superpoder2;
+    
+
+
+
     
 
         printf("\nCarta 1:\n");
@@ -98,6 +111,9 @@
         printf("Pontos Turisticos: %d\n", pontos_turisticos2);
         printf("Densidade populacional: %.2f\n" ,densidadepopulacional2);
         printf("PIB per capita: %.2f\n", pibpercapita2);
+
+        printf("\nResultado da comparacao: %d\n", resultado);
+    
 
 
         return 0;
