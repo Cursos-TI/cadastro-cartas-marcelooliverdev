@@ -12,6 +12,7 @@
         float pibpercapita1;
         float superpoder1;
         
+        
 
         int populacao2 = 6748000;
         char cidade2[40]= "riodejaneiro";
@@ -113,9 +114,45 @@
         printf("PIB per capita: %.2f\n", pibpercapita2);
 
         printf("\nResultado da comparacao: %d\n", resultado);
-    
 
+        printf("Atributo de comparacao das cartas: Populacao\n");
 
+        printf("Carta 1 - %s (%c): %d\n", cidade1, estado1, populacao1);
+        printf("Carta 2 - %s (%c): %d\n", cidade2, estado2, populacao2);
+
+        if(populacao1 > populacao2){
+            printf("Carta 1 - (%s) Venceu!\n", cidade1);
+        } else {
+             printf("Carta 2 - (%s) Venceu!\n", cidade2);
+        }
+
+        printf("Atributo de comparacao das cartas: Area\n");
+
+        printf("Carta 1 - %s (%c): %.2f\n", cidade1, estado1, area1);
+        printf("Carta 2 - %s (%c): %.2f\n", cidade2, estado2, area2);
+
+        if (area1 > area2){
+            printf("Carta 1 - (%s) Venceu!\n", cidade1);
+        } else { 
+            printf("Carta 2 - (%s) Venceu!\n", cidade2);
+
+        }
+
+        printf("Atributo de comparacao das cartas: PIB\n");
+
+        printf("Carta 1 - %s (%c): %.2f\n", cidade1, estado1, pib1);
+        printf("Carta 2 - %s (%c): %.2f\n", cidade2, estado2, pib2);
+
+        if(pib1 > pib2){
+            printf("Carta 1 - (%s) Venceu!\n", cidade1);
+        } 
+        else{
+            printf("Carta 2 - (%s) Venceu!\n", cidade2);
+
+        }
+
+        
         return 0;
 
     }
+    
